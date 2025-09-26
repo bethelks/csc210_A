@@ -5,6 +5,7 @@
 import os
 import json
 from datetime import datetime
+from pathlib import Path
 
 
 class ConferenceSystem:
@@ -170,6 +171,42 @@ class ConferenceSystem:
    
     def upload_presentation(self, session_id, file_path):
         """Student 2: Upload presentation slides"""
+        """Upload presentation slides into an uploads folder."""
+        print("=== File Upload Feature ===")
+
+        # Create Path object
+        file_path = Path(file_path)
+
+        # If only a file name is given, assume it's in the current project directory
+        if not file_path.is_absolute():
+            file_path = Path.cwd() / file_path
+
+        # 1. Check if file exists
+        if not file_path.exists():
+            return f"Error: File '{file_path}' not found."
+
+        # 2. Check file extension
+        valid_extensions = [".pdf", ".ppt", ".pptx"]
+        if file_path.suffix.lower() not in valid_extensions:
+            return "Error: Only PDF, PPT, or PPTX files are allowed."
+
+        # 3. Ensure uploads folder exists
+        uploads_dir = Path("uploads")
+        uploads_dir.mkdir(exist_ok=True)
+
+        # 4. Create unique destination file name
+        destination = uploads_dir / f"session_{session_id}_{file_path.name}"
+
+        # 5. Copy file into uploads folder
+        destination.write_bytes(file_path.read_bytes())
+
+        # 6. Store uploaded file name in dictionary
+        if session_id not in self.uploads:
+            self.uploads[session_id] = []
+        self.uploads[session_id].append(destination.name)
+
+        return f"Successfully uploaded '{destination.name}' to session {session_id}."
+
         print("=== File Upload Feature ===")
         print("This feature will be implemented by Student 2")
         # TODO: Student 2 will implement this
