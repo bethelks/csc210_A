@@ -45,6 +45,12 @@ def browse_sessions(system):
     """Browse all sessions"""
     print("\n=== Browse Sessions ===")
     system.display_all_sessions()  # This will call Student 1's implementation
+    for session in system.sessions:  # Use 'system' not 'self'
+        print(f"ID: {session['id']}")
+        print(f"Title: {session['title']}")
+        print(f"Speaker: {session['speaker']}")
+        print(f"Time: {session['time']}")
+        print("-" * 40)
 
 def view_session_details(system):
     """View details of a specific session"""
