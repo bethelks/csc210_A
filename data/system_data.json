@@ -1,0 +1,77 @@
+{
+  "sessions": [
+    {
+      "id": 1,
+      "title": "Python for Beginners",
+      "speaker": "Alice Johnson",
+      "time": "10:00 AM",
+      "room": "Room A",
+      "topics": [
+        "programming",
+        "beginner",
+        "python"
+      ],
+      "description": "Learn Python fundamentals"
+    },
+    {
+      "id": 2,
+      "title": "Advanced Data Structures",
+      "speaker": "Bob Smith",
+      "time": "11:30 AM",
+      "room": "Room B",
+      "topics": [
+        "programming",
+        "advanced",
+        "data structures"
+      ],
+      "description": "Deep dive into data structures"
+    },
+    {
+      "id": 3,
+      "title": "Machine Learning Basics",
+      "speaker": "Carol Davis",
+      "time": "2:00 PM",
+      "room": "Room C",
+      "topics": [
+        "AI",
+        "machine learning",
+        "data science"
+      ],
+      "description": "Introduction to ML concepts"
+    },
+    {
+      "id": 4,
+      "title": "Web Development with Django",
+      "speaker": "David Wilson",
+      "time": "3:30 PM",
+      "room": "Room A",
+      "topics": [
+        "web",
+        "django",
+        "python"
+      ],
+      "description": "Build web applications with Django"
+    },
+    {
+      "id": 5,
+      "title": "Data Visualization",
+      "speaker": "Eva Brown",
+      "time": "4:45 PM",
+      "room": "Room D",
+      "topics": [
+        "data",
+        "visualization",
+        "analytics"
+      ],
+      "description": "Create effective data visualizations"
+    }
+  ],
+  "favorites": {},
+  "uploads": {},
+  "analytics": {
+    "views": 0,
+    "favorites": 0,
+    "downloads": 0,
+    "session_views": {}
+  }
+}

@@ -42,10 +42,19 @@ def login_user(system):
         return False
 
 def browse_sessions(system):
+    # """Browse all sessions"""
+    # print("\n=== Browse Sessions ===")
+    # system.display_all_sessions()  # This will call Student 1's implementation
+ 
     """Browse all sessions"""
     print("\n=== Browse Sessions ===")
-    system.display_all_sessions()  # This will call Student 1's implementation
-
+    print("\n=== All Conference Sessions ===")
+    for session in system.sessions:  # Use 'system' not 'self'
+        print(f"ID: {session['id']}")
+        print(f"Title: {session['title']}")
+        print(f"Speaker: {session['speaker']}")
+        print(f"Time: {session['time']}")
+        print("-" * 40)
 def view_session_details(system):
     """View details of a specific session"""
     print("\n=== Session Details ===")

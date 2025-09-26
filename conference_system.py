@@ -160,12 +160,19 @@ class ConferenceSystem:
             self.analytics['session_views'][session_id] = 1
     
     # Placeholder methods for students to implement
-    def display_all_sessions(self):
-        """Student 1: Display all conference sessions"""
-        print("=== Session Browser Feature ===")
-        print("This feature will be implemented by Student 1")
-        # TODO: Student 1 will implement this
-    
+   
+def display_all_sessions(self):
+    #"""Display all conference sessions"""
+    print("\n=== All Conference Sessions ===")
+    # for session in self.sessions:
+    #     print(f"ID: {session['id']}")
+    #     print(f"Title: {session['title']}")
+    #     print(f"Speaker: {session['speaker']}")
+    #     print(f"Time: {session['time']}")
+    #     print("-" * 40)
+
+    # return 
+
     def upload_presentation(self, session_id, file_path):
         """Student 2: Upload presentation slides"""
         print("=== File Upload Feature ===")
@@ -185,3 +192,4 @@ class ConferenceSystem:
         print("=== Admin Dashboard Feature ===")
         print("This feature will be implemented by Student 4")
         # TODO: Student 4 will implement this
+
